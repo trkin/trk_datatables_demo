@@ -1,0 +1,7 @@
+<h1>User</h1>
+<%= bootstrap_form_with model: @user, local: true, layout: :horizontal do |f| %>
+  <%= f.text_field :email %>
+  <%= f.text_field :name %>
+  <%= f.datetime_field :registered_at %>
+  <%= f.submit 'Update' %>
+<% end %>
