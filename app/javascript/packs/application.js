@@ -15,3 +15,7 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+//
+// node modules
+import 'stylesheet/application'
+import 'turbolinks.load'
