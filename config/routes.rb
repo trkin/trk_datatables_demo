@@ -6,4 +6,9 @@ Rails.application.routes.draw do
       post :search
     end
   end
+  resources :posts do
+    collection do
+      post :search
+    end
+  end
 end
