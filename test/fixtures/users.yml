@@ -1,0 +1,8 @@
+<% 100.times do |i| %>
+user_<%= i %>:
+  email: email<%= i %>@example.com
+  name: Name <%= i %>
+  latitude: 1.5
+  longitude: 1.5
+  registered_at: <%= DateTime.parse('2020-01-01 08:00:00') + i.days %>
+<% end %>

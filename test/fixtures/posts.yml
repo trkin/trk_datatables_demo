@@ -1,0 +1,10 @@
+<% 100.times do |i| %>
+<% next if i % 2 == 0 %>
+post_<%= i %>:
+  user: user_<%= i %>
+  title: Title <%= i %>
+  body: Body <%= i %>
+  status: <%= i % Post.statuses.size %>
+  verified: <%= i % 10 == 0 %>
+  published_on: <%= DateTime.parse('2020-01-01 08:00:00') + i.days %>
+<% end %>
