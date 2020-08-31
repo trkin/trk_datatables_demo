@@ -55,4 +55,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'bootstrap_form'
 
-gem 'trk_datatables'
+# for index, ordering, pagination and searching
+gem 'trk_datatables', '=0.2.1'
+# no need to `bundle update trk_datatables` when switch to local
+# gem 'trk_datatables', path: '~/gems/trk_datatables'

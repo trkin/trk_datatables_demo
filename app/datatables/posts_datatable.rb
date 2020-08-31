@@ -5,7 +5,7 @@ class PostsDatatable < TrkDatatables::ActiveRecord
       'posts.user_id': {},
       'posts.title': {},
       'posts.body': {},
-      'posts.status': {},
+      'posts.status': {select_options: Post.statuses},
       'posts.verified': {},
       'posts.published_on': {},
     }

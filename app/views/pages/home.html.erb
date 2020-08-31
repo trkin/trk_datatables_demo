@@ -1,8 +1,14 @@
 <h1>TrkDatatables Demo</h1>
-<p>Here is a example pages with <a href='https://github.com/trkin/trk_datatables'>trk_datatables</a> gem:</p>
+<p>Here is example usage of <a href='https://github.com/trkin/trk_datatables'>trk_datatables</a> gem:</p>
 <ul>
   <li>
-    <%= link_to 'Users', users_path %>
+    <%= link_to 'users_path', users_path %>: simple index page with pagination, sort, global and column search
+  </li>
+  <li>
+    <%= link_to "users_path(UsersDatatable.param_set('users.registered_at', Date.parse('2020-02-01')..Date.parse('2020-02-15')))", users_path(UsersDatatable.param_set('users.registered_at', Date.parse('2020-02-01')..Date.parse('2020-02-15'))) %>: use params to filter only users that <code>users.registered_at</code> (datetime field) is in interval <code>2020-02-01 - 2020-02-15</code>
+  </li>
+  <li>
+    <%= link_to "posts_path(PostsDatatable.param_set('posts.status', Post.statuses.values_at(:draft, :promoted)) .deep_merge(PostsDatatable.param_set('posts.verified', true)))", posts_path(PostsDatatable.param_set('posts.status', Post.statuses.values_at(:draft, :promoted)).deep_merge(PostsDatatable.param_set('posts.verified', true))) %>: use params for two columns: <code>status</code> (integer field) to <code>published</code> and <code>verified</code> (boolean field) to <code>true</code>
   </li>
 </ul>
 

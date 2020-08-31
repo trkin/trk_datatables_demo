@@ -1,5 +1,4 @@
 <% 100.times do |i| %>
-<% next if i % 2 == 0 %>
 post_<%= i %>:
   user: user_<%= i %>
   title: Title <%= i %>
