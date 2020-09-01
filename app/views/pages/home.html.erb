@@ -13,5 +13,7 @@
   <li>
     <%= link_to "posts_path(PostsDatatable.param_set('posts.status', Post.statuses.values_at(:draft, :promoted)) .deep_merge(PostsDatatable.param_set('posts.verified', true)))", posts_path(PostsDatatable.param_set('posts.status', Post.statuses.values_at(:draft, :promoted)).deep_merge(PostsDatatable.param_set('posts.verified', true))) %>: use params for two columns: <code>status</code> (integer field) to <code>published</code> and <code>verified</code> (boolean field) to <code>true</code>
   </li>
+   <li>
+     <%= link_to "most_liked_posts_path", most_liked_posts_path() %>: use calculated columns and sort and filter on it
+  </li>
 </ul>
-

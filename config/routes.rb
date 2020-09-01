@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   resources :posts do
     collection do
       post :search
+      get :most_liked
+      post :most_liked_search
     end
   end
 end

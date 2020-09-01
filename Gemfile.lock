@@ -1,3 +1,9 @@
+PATH
+  remote: ../../gems/trk_datatables
+  specs:
+    trk_datatables (0.2.1)
+      activesupport
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -172,8 +178,6 @@ GEM
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
-    trk_datatables (0.2.1)
-      activesupport
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -216,7 +220,7 @@ DEPENDENCIES
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
-  trk_datatables (= 0.2.1)
+  trk_datatables!
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 3.3.0)

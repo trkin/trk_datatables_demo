@@ -1,7 +1,7 @@
-<% 100.times do |i| %>
+<% 200.times do |i| %>
 <% next if i % 2 == 0 || i % 3 == 0 %>
-comment_<%= i %>:
-  post: post_<%= i %>
+comment_<%= i  %>:
+  post: post_<%= i % 100 %>
   body: Body <%= i %>
   likes: <%= i % 20 %>
 <% end %>
