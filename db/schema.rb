@@ -12,21 +12,16 @@
 
 ActiveRecord::Schema.define(version: 2020_08_30_050420) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
-  create_table "comments", force: :cascade do |t|
+  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "post_id", null: false
     t.text "body"
     t.integer "likes"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["body"], name: "index_comments_on_body"
-    t.index ["likes"], name: "index_comments_on_likes"
     t.index ["post_id"], name: "index_comments_on_post_id"
   end
 
-  create_table "posts", force: :cascade do |t|
+  create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "title"
     t.text "body"
@@ -35,15 +30,10 @@ ActiveRecord::Schema.define(version: 2020_08_30_050420) do
     t.date "published_on"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["body"], name: "index_posts_on_body"
-    t.index ["published_on"], name: "index_posts_on_published_on"
-    t.index ["status"], name: "index_posts_on_status"
-    t.index ["title"], name: "index_posts_on_title"
     t.index ["user_id"], name: "index_posts_on_user_id"
-    t.index ["verified"], name: "index_posts_on_verified"
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email", null: false
     t.string "name"
     t.float "latitude"

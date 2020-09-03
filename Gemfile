@@ -7,6 +7,8 @@ ruby '2.6.3'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 # Use postgres
 gem 'pg'
+# mysql
+gem 'mysql2', '< 0.5'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -56,6 +58,6 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'bootstrap_form'
 
 # for index, ordering, pagination and searching
-# gem 'trk_datatables', '=0.2.1'
+gem 'trk_datatables', '=0.2.2'
 # no need to `bundle update trk_datatables` when switch to local
-gem 'trk_datatables', path: '~/gems/trk_datatables'
+# gem 'trk_datatables', path: '~/gems/trk_datatables'

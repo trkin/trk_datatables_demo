@@ -7,11 +7,19 @@ class PostsController < ApplicationController
     render json: PostsDatatable.new(view_context)
   end
 
-  def most_liked
-    @datatable = MostLikedPostsDatatable.new view_context
+  def with_comments_count
+    @datatable = PostsWithCommentsCountDatatable.new view_context
   end
 
-  def most_liked_search
-    render json: MostLikedPostsDatatable.new(view_context)
+  def with_comments_count_search
+    render json: PostsWithCommentsCountDatatable.new(view_context)
+  end
+
+  def with_comments_body
+    @datatable = PostsWithCommentsBodyDatatable.new view_context
+  end
+
+  def with_comments_body_search
+    render json: PostsWithCommentsBodyDatatable.new(view_context)
   end
 end

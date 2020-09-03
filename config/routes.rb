@@ -9,8 +9,10 @@ Rails.application.routes.draw do
   resources :posts do
     collection do
       post :search
-      get :most_liked
-      post :most_liked_search
+      get :with_comments_count
+      post :with_comments_count_search
+      get :with_comments_body
+      post :with_comments_body_search
     end
   end
 end
